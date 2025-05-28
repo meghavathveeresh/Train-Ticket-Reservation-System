@@ -19,7 +19,7 @@ pipeline {
         }
 		stage('Deploy to Tomcat Server') {
         steps {
-            deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'Tomcat', path: '', url: 'http://localhost:8080')], contextPath: 'TRAIN SERVICES MV', war: 'target/*.war'
+            deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'AMDN', path: '', url: 'http://localhost:8080')], contextPath: 'MV TRAIN SERVICE', war: 'target/*.war'
         }
     }
     }
