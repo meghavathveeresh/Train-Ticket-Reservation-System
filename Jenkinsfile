@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git credentialsId: 'github', url: 'https://github.com/Lakshmikdev21/Train-Ticket-Reservation-System.git'
+                git credentialsId: 'github', url: 'https://github.com/meghavathveeresh/Train-Ticket-Reservation-System.git'
             }
         }
           stage('Build') {
@@ -19,7 +19,7 @@ pipeline {
         }
 		stage('Deploy to Tomcat Server') {
         steps {
-            deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'Tomcat', path: '', url: 'http://localhost:8080')], contextPath: 'LAKSHMI KANTH TRAIN SERVICES', war: 'target/*.war'
+            deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'Tomcat', path: '', url: 'http://localhost:8080')], contextPath: 'Meghavath Veeresh Kumar', war: 'target/*.war'
         }
     }
     }
