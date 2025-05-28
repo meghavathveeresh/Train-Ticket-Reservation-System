@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git credentialsId: 'github', url: 'https://github.com/meghavathveeresh/Train-Ticket-Reservation-System.git'
+                git credentialsId: 'GITHUB', url: 'https://github.com/meghavathveeresh/Train-Ticket-Reservation-System.git'
             }
         }
           stage('Build') {
